@@ -3,6 +3,7 @@ html ->
   head ->
     meta charset: "utf-8"
     title (pagetitle + ' - ' or '') + "Rood Wit Blauw"
+    link rel: "shortcut icon", href:"favicon.ico"
     link rel: "stylesheet", type: "text/css", href: "/style.min.css"
     meta name: "keywords", content: @meta.keywords
     meta name: "description", content: @meta.description
