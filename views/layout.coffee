@@ -10,10 +10,10 @@ html ->
   body ->
     ul class: "menu", ->
       for page, i in @pages
-        li -> a href: @url(page[language].slug, language), class: ("active" if pid is i), -> page[language].title
+        li -> a href: @url(page[language].slug, language), class: ("active" if pid is i), title: page[language].title, -> page[language].title
     ul class: "language-menu", ->
-      li -> a href: @url(@pages[pid or 0]["en"].slug, "en"), class: ("active" if language is "en" and pid isnt null), -> "English"
-      li -> a href: @url(@pages[pid or 0]["nl"].slug, "nl"), class: ("active" if language is "nl" and pid isnt null), -> "Nederlands"
+      li -> a href: @url(@pages[pid or 0]["en"].slug, "en"), class: ("active" if language is "en" and pid isnt null), title: "In English", -> "English"
+      li -> a href: @url(@pages[pid or 0]["nl"].slug, "nl"), class: ("active" if language is "nl" and pid isnt null), title: "In het Nederlands", -> "Nederlands"
     div class: "content", -> @body
     div class: "footer", ->
       p -> "&copy; Rood Wit Blauw 2011"

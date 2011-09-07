@@ -53,7 +53,7 @@ app.configure ->
             pages: pages
             url: url
             meta:
-                keywords: "english lessons, english, lessons, learn, language, speak"
+                keywords: "english lessons, engels leren, engels les, wageningen, machteld, roodwitblauw, rood wit blauw"
                 description: "Living in Holland is much more fun when you speak the language and understand what people are saying. Does it happen to you that you start to speak Dutch and people answer in English? Do you always understand jokes and expressions? Would you like to prevent to make mistakes, rather than have them corrected? Now is the time to improve your Dutch in a relaxed atmosphere. You decide what you want to learn and the amount and frequency of the lessons. You get a free intake of 30 minutes! Start today!"
 
 app.get /^(?:\/(nl))?(?:(?!nl)\/([a-z0-9\-_]+))?[\/]?$/, (req, res, next) ->
