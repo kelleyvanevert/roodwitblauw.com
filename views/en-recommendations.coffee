@@ -1,6 +1,30 @@
 
 h1 "Recommendations"
 
+h2 "ar.tem.eva"
+
+em "Posted: July 18 2011"
+
+p "Nederlandse les in Wageningen"
+
+p "Een ieder die zijn of haar Nederlands wil verbeteren is bij Machteld aan het goede adres!"
+p "Zij heeft mij uitstekend geholpen, vooral met de voorbereidingen bij sollicitaties, wat uiteindelijk resulteerde in een nieuwe baan!"
+p "Ondanks dat ik al 7 jaar in Nederland woon, bleek dat ik problemen kreeg bij het solliciteren, gewoon omdat mijn Nederlands, naar mijn idee, niet voldoende was. Met hulp van Machteld en haar toewijding ben ik daar vanaf."
+p "Kortom, door haar doelgerichte lessen heb ik meer zelfvertrouwen in mijn persoon en in mijn Nederlandse taal."
+p "Olga"
+
+hr()
+
+h2 "cynaps"
+
+em "Posted: June 20 2011"
+
+p "dutch teacher in Wageningen"
+
+p "10 months ago, I came to the Netherlands to live with my dutch partner. We were searching for a Dutch teacher who would be able to help me to improve my Dutch very quick in order to work here again as Physiotherapist (job I was already doing in France since 3 years). Machteld was friendly, encouraging and attentive to what I wanted en needed to learn to reach my goal. She advised me in many ways and thanks to her help with learning the language, I could, 6 month later get the recognition from my diploma in the Netherlands and find work as Physiotherapist again."
+
+hr()
+
 h2 "fab"
 
 em "Posted: August 18 2010"
