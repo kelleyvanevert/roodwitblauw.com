@@ -25,6 +25,23 @@ p "10 months ago, I came to the Netherlands to live with my dutch partner. We we
 
 hr()
 
+h2 "aysel_399"
+
+em "Posted: Februari 2 2011"
+
+p "Before I chose Machteld as my teacher I had had interviews with other candidates. I decided on her because during the intake she was positive, enthusiastic and the most important was that she gave me the confidence that she was the one who could help me. When we began I didn't know a word in Dutch. Now, after 5 months I am writing this piece (see below) in Dutch!"
+p "She is a responsible teacher who is always prepared for the lesson. She prepares extra material (extra grammar exercises from other books, articles from newspapers, songs etc) according to the theme and the grammar of the lesson beforehand. She is very creative in teaching methods. Each lesson we do prosody (rhythm of the language) and spelling exercises, and quick question-and-answer games. What's more, during the lesson we speak a lot in Dutch. She follows not only the book but also uses pictures to describe or we play games in which I should think up and tell a story. Moreover, she always searches in internet, on TV or in newspapers/magazines for materials that are both good for advancing my Dutch and at the same time are fun. "
+p "Furthermore she is a great person. She always motivates and helps me."
+p "If you want to learn, to advance or just want to speak Dutch well, then you are at the right adress."
+p "Voordat ik Machteld als mijn lerares koos, had ik met andere kandidaten ook gesprekken. Ik besloot voor haar te kiezen, want tijdens de intake ze was positief, enthousiast en het belangrijkste was dat ze me het vertrouwen gaf dat zij degene was die mij kon helpen. Toen we begonnen kende ik geen woord Nederlands. Nu, na 5 maanden schrijf ik dit stukje in het Nederlands!"
+p "Ze is een verantwoordelijke leerkracht die altijd voor de les voorbereid is. Ze zoekt van tevoren extra materiaal (extra grammatica-oefeningen uit andere boeken, artikelen uit kranten, liedjes enz.) bij het thema en de grammatica van de les. Ze is erg creatief in lesmethoden. Elke les doen we intonatie- en spellingoefeningen en snelle vraag-en-antwoord spelletjes. En we spreken veel in het Nederlands. Ze volgt niet alleen het boek, maar gebruikt ook foto's, of we spelen spelletjes waarin ik een verhaal moet bedenken en vertellen. Bovendien is ze altijd op zoek in internet, op tv of in kranten / tijdschriften voor materialen die goed zijn voor de voortgang van mijn Nederlands, maar tegelijkertijd leuk."
+p "Verder is ze een geweldig persoon. Ze motiveert en helpt me altijd."
+p "Als u Nederlands wilt leren om vooruit te komen of u wilt gewoon goed Nederlands spreken, dan bent u bij RoodWitBlauw aan het juiste adres."
+p "Groeten,"
+p "Aysel Mammadova"
+
+hr()
+
 h2 "fab"
 
 em "Posted: August 18 2010"
