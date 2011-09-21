@@ -87,5 +87,5 @@ app.get "*", (req, res) ->
             slug: "404"
             language: "en"
 
-app.listen 7663
+app.listen 8002
 
