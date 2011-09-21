@@ -7,8 +7,8 @@ coffeekup = require "coffeekup"
 # An ordered array of pages, with for each page, given the language,
 #  an array containing the title of the page [0] and the slug [1]
 pages = '''
-    en, Home,                                      home
-    nl, Home,                                      home
+    en, Dutch lessons in Wageningen,               home
+    nl, Nederlandse les in Wageningen,             home
      ==
     en, What to expect from Roodwitblauw?,         general-information
     nl, Wat mag u van Roodwitblauw verwachten?,    algemene-informatie
