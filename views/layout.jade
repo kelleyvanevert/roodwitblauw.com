@@ -1,0 +1,27 @@
+doctype 5
+html
+  head
+    meta(charset="utf-8")
+    title= (pagetitle + " - " || "") + "Rood Wit Blauw"
+    link(rel="shortcut icon", href="favicon.ico")
+    link(rel="stylesheet", type="text/css", href="/style.css")
+    meta(name="keywords", content=config.meta.keywords)
+    meta(name="description", content=config.meta.description)
+  body
+    ul(class="menu")
+      - for page, i in config.pages
+        li: a(href=config.url(page[language].slug, language), class=(pid == i ? "active" : ""), title=page[language].title)= page[language].title
+    ul(class="language-menu")
+      li: a(href=config.url(config.pages[pid || 0]["en"].slug, "en"), class=(language == "en" && pid != null ? "active" : ""), title="In English") English
+      li: a(href=config.url(config.pages[pid || 0]["nl"].slug, "nl"), class=(language == "nl" && pid != null ? "active" : ""), title="In het Nederlands") Nederlands
+    div(class="content")!= body
+    div(class="footer")
+      p &copy; Rood Wit Blauw 2011
+
+//      p Website door: "
+//        a href: "http://kelleyvanevert.nl/", -> "Kelley"
+//      p ->
+//        a href: "/algemene-voorwaarden.pdf", -> "Algemene Voorwaarden"
+//        text " - "
+//        a href: "/klachtenprocedure.pdf", -> "Klachtenprocedure"
+

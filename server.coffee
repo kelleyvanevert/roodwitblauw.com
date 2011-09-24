@@ -2,7 +2,6 @@
 express   = require "express"
 app       = express.createServer()
 path      = require "path"
-coffeekup = require "coffeekup"
 
 # An ordered array of pages, with for each page, given the language,
 #  an array containing the title of the page [0] and the slug [1]
@@ -43,18 +42,16 @@ url = (slug, lang) ->
         segs.push slug
     return "/" + segs.join "/"
 
-app.register ".coffee", coffeekup
+config =
+    pages: pages
+    url: url
+    meta:
+        keywords: "english lessons, engels leren, engels les, wageningen, machteld, roodwitblauw, rood wit blauw"
+        description: "Living in Holland is much more fun when you speak the language and understand what people are saying. Does it happen to you that you start to speak Dutch and people answer in English? Do you always understand jokes and expressions? Would you like to prevent to make mistakes, rather than have them corrected? Now is the time to improve your Dutch in a relaxed atmosphere. You decide what you want to learn and the amount and frequency of the lessons. You get a free intake of 30 minutes! Start today!"
 
 app.configure ->
     app.use express.static __dirname + "/public"
-    app.set "view engine", "coffee"
-    app.set "view options",
-        context:
-            pages: pages
-            url: url
-            meta:
-                keywords: "english lessons, engels leren, engels les, wageningen, machteld, roodwitblauw, rood wit blauw"
-                description: "Living in Holland is much more fun when you speak the language and understand what people are saying. Does it happen to you that you start to speak Dutch and people answer in English? Do you always understand jokes and expressions? Would you like to prevent to make mistakes, rather than have them corrected? Now is the time to improve your Dutch in a relaxed atmosphere. You decide what you want to learn and the amount and frequency of the lessons. You get a free intake of 30 minutes! Start today!"
+    app.set "view engine", "jade"
 
 app.get /^(?:\/(nl))?(?:(?!nl)\/([a-z0-9\-_]+))?[\/]?$/, (req, res, next) ->
     slug = req.params[1] or "home"
@@ -73,19 +70,19 @@ app.get /^(?:\/(nl))?(?:(?!nl)\/([a-z0-9\-_]+))?[\/]?$/, (req, res, next) ->
         return
     
     res.render lang + "-" + slug,
-        locals:
-            pid: pageid
-            pagetitle: title
-            slug: slug
-            language: lang
+        config: config
+        pid: pageid
+        pagetitle: title
+        slug: slug
+        language: lang
 
 app.get "*", (req, res) ->
     res.render "404",
-        locals:
-            pid: null
-            pagetitle: "404"
-            slug: "404"
-            language: "en"
+        config: config
+        pid: null
+        pagetitle: "404"
+        slug: "404"
+        language: "en"
 
 app.listen 8002
 

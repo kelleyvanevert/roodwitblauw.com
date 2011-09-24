@@ -2,7 +2,7 @@
 body {
     margin:0;
     padding:0;
-    background:#fff url(logo-w250.png) no-repeat 15px 50px fixed;
+    background:#fff url("/logo-w250.png") no-repeat 15px 50px fixed;
     
     font-family:Georgia, "Times new Roman", serif;
     font-size:16px;
@@ -27,6 +27,13 @@ p {
     margin:10px 0;
     line-height:22px;
     font-size:16px;
+}
+.content ul {
+    margin:10px 0;
+    padding:0 0 0 20px;
+}
+.content ul li {
+    line-height:22px;
 }
 ul.menu {
     position:fixed;
