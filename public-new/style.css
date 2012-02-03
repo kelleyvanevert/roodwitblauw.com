@@ -4,62 +4,68 @@ body {
   padding:0;
   font-family:Arial, sans-serif;
   font-size:16px;
+}
+
+#top {
+  padding:10px 15px;
+  position:relative;
   background:#f5f5f5;
-}
-
-#sidebar {
-  position:fixed;
-  top:0;
-  left:0;
-  bottom:0;
-  margin:0;
-  padding:25px 0;
-  width:310px;
-}
-
-#content {
-  margin-left:330px;
-}
-
-#content p,
-#content ul,
-#content li {
-  line-height:140%;
+  border-bottom:1px solid #ddd;
 }
 
 ul#menu {
-  margin:20px 0;
+  margin:0 0 0 235px;
   padding:0;
 }
 
 ul#menu li {
-  margin:0;
+  margin:2px 0;
   padding:0;
   list-style:none;
 }
 
 ul#menu li a {
-  display:block;
-  padding:5px 10px 5px 25px;
-  font-size:17px;
-  color:#155bbb;
-  text-decoration:underline;
+  font-size:20px;
+  color:#b8b8b8;
+  font-weight:bold;
+  text-decoration:none;
+  letter-spacing:-1px;
+  text-shadow:2px 2px 0 #eee;
 }
 
 ul#menu li.active a {
   color:#000;
-  text-decoration:none;
-  font-weight:bold;
-  letter-spacing:-1px;
+  padding-left:3px;
+  text-shadow:2px 2px 0 #ddd;
 }
 
 a.logo {
-  margin:0 0 0 30px;
-  padding:0;
   display:block;
-  width:244px;
-  height:270px;
+  position:absolute;
+  width:217px;
+  height:240px;
   background:transparent url("logo.png") no-repeat top left;
+}
+
+#content {
+  margin-left:250px;
+  max-width:900px;
+}
+
+#content p,
+#content li,
+#content dd {
+  line-height:140%;
+  color:#333;
+}
+
+#content p {
+  margin:10px 0;
+}
+
+#content .col {
+  float:left;
+  width:50%;
 }
 
 h1 {
@@ -70,7 +76,7 @@ h1 {
 }
 
 h2 {
-  margin:10px 0;
+  margin:20px 0 15px 0;
   color:#124d9e;
   font-size:20px;
 }
@@ -88,54 +94,16 @@ dt {
   display:block;
 }
 
-.box.boxed {
-  position:relative;
-  left:-10px;
-  padding:20px 0 0 20px;
-  width:600px;
+.content {
+  padding-right:15px;
 }
 
-.box.boxed .tl {
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:20px;
-  width:20px;
-  background:transparent url("box.png") top left;
+p.meta {
+  font-style:italic;
 }
 
-.box.boxed .t {
-  position:absolute;
-  top:0;
-  left:20px;
-  right:20px;
-  height:20px;
-  background:transparent url("box.png") -20px 0;
-}
-
-.box.boxed .tr {
-  position:absolute;
-  top:0;
-  right:0;
-  width:20px;
-  height:20px;
-  background:transparent url("box.png") top right;
-}
-
-.box.boxed .bl {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:20px;
-  height:20px;
-  background:transparent url("box.png") bottom left;
-}
-
-.box.boxed .br {
-  padding:0 20px 20px 0;
-  background:transparent url("box.png") bottom right;
-}
-
-.box.boxed .br .content {
-  padding:1px 5px;
+p.footer {
+  margin:100px 0 50px 0;
+  text-align:center;
+  color:#888;
 }
