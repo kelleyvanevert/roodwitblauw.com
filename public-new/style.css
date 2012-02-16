@@ -9,42 +9,96 @@ body {
 #top {
   padding:10px 15px;
   position:relative;
-  background:#f5f5f5;
+  background:#f5f5f5 url("top.png") top left repeat-x;
   border-bottom:1px solid #ddd;
 }
 
-ul#menu {
+#menu {
   margin:0 0 0 235px;
   padding:0;
 }
 
-ul#menu li {
-  margin:2px 0;
+#menu ul {
+  margin:0 30px 0 0;
+  padding:0;
+  float:left;
+}
+
+#menu ul li {
+  margin:3px 0;
   padding:0;
   list-style:none;
 }
 
-ul#menu li a {
-  font-size:20px;
-  color:#b8b8b8;
+#menu ul li .key {
+  font-family:"Times new Roman", serif;
+  font-size:17px;
+  font-style:italic;
+  color:#bbb;
+}
+
+#menu ul li a {
+  font-size:19px;
+  color:#888;
   font-weight:bold;
   text-decoration:none;
   letter-spacing:-1px;
-  text-shadow:2px 2px 0 #eee;
 }
 
-ul#menu li.active a {
+#menu ul li a:hover {
+  color:#555;
+  text-shadow:1px 1px 0 #f5f5f5;
+}
+
+#menu ul li.active a {
   color:#000;
-  padding-left:3px;
-  text-shadow:2px 2px 0 #ddd;
+  text-shadow:1px 1px 0 #f5f5f5;
 }
 
-a.logo {
-  display:block;
+#left {
   position:absolute;
+}
+
+#left a.logo {
+  display:block;
   width:217px;
   height:240px;
   background:transparent url("logo.png") no-repeat top left;
+}
+
+#left ul#languages {
+  margin:20px 0 0 20px;
+  padding:0;
+}
+
+#left ul#languages li {
+  margin:0 0 5px 0;
+  padding:0;
+  list-style:none;
+  text-align:center;
+}
+
+#left ul#languages li a {
+  font-family:"Times new Roman", serif;
+  font-size:24px;
+  font-style:italic;
+  letter-spacing:-1px;
+  text-decoration:none;
+  color:#777;
+}
+
+#left ul#languages li.active a {
+  font-family:Arial, sans-serif;
+  text-transform:uppercase;
+  font-size:19px;
+  letter-spacing:-2px;
+  font-weight:bold;
+  font-style:normal;
+  color:#000;
+}
+
+#left ul#languages li.active a span {
+  font-size:23px;
 }
 
 #content {
@@ -68,15 +122,18 @@ a.logo {
   width:50%;
 }
 
-h1 {
+h1,
+p.h1 {
   margin:20px 0 10px 0;
+  padding:0;
   font-size:40px;
   letter-spacing:-1px;
   text-shadow:2px 2px 0px #ddd;
+  font-weight:bold;
 }
 
 h2 {
-  margin:20px 0 15px 0;
+  margin:15px 0 15px 0;
   color:#124d9e;
   font-size:20px;
 }
@@ -88,6 +145,9 @@ dt {
 
 .page {
   display:none;
+}
+.page.active {
+  display:block;
 }
 
 #page-home {

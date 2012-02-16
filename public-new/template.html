@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>[%= currentpage.title[currentlanguage] %] - Rood Wit Blauw</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+
+<div id="top">
+  <div id="left">
+    <a class="logo" href="[%= homepage.url[currentlanguage] %]"></a>
+    <ul id="languages">
+      <li class="[%= (currentlanguage == 'en' ? 'active' : '') %]"><a href="[%= currentpage.url.en %]"><span>E</span>nglish</a></li>
+      <li class="[%= (currentlanguage == 'nl' ? 'active' : '') %]"><a href="[%= currentpage.url.nl %]"><span>N</span>ederlands</a></li>
+    </ul>
+  </div>
+  <div id="menu">
+    <ul class="menu">
+      [% pages.map(function (page, i) { %]
+      <li class="[%= (currentpage.id == page.id ? 'active' : '') %]">
+        <span class="key">([%= i %])</span>
+        <a href="[%= page.url[currentlanguage] %]" rel="[%= page.id %]">[%= page.title[currentlanguage] %]</a>
+      </li>
+      [% if (i == 1) { %]
+    </ul>
+    <ul class="menu">
+      [% } %]
+      [% }) %]
+      <!-- TODO 2 columns -->
+    </ul>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<div id="content">
+  [% pages.map(function (page, i) { %]
+  <div class="page [%= (page === currentpage && 'en' === currentlanguage ? 'active' : '') %]" id="page-en-[%= page.id %]">[%= page.content.en %]</div>
+  <div class="page [%= (page === currentpage && 'nl' === currentlanguage ? 'active' : '') %]" id="page-nl-[%= page.id %]">[%= page.content.nl %]</div>
+  [% }) %]
+</div>
+
+<div style="clear:both;"></div>
+<p class="footer">
+  &copy; Rood Wit Blauw 2011
+</p>
+
+<!--
+<script type="text/javascript">
+
+  // Page transitions
+  $("#menu a").click(function () {
+    $("#menu li").removeClass("active");
+    $(this).parent().addClass("active");
+    $(".page").hide();
+    $("#page-" + $(this).attr("rel")).show();
+    return false;
+  });
+  $("#languages a").click(function () {
+    $("#languages li").removeClass("active");
+    $(this).parent().addClass("active");
+    return false;
+  });
+
+</script>
+-->
+</body>
+</html>
