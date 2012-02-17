@@ -1,9 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <meta charset="utf-8" />
   <title>[%= currentpage.title[currentlanguage] %] - Rood Wit Blauw</title>
+  <meta name="keywords" content="english lessons, engels leren, engels les, wageningen, machteld, roodwitblauw, rood wit blauw" />
+  <meta name="description" content="Living in Holland is much more fun when you speak the language and understand what people are saying.
+    Does it happen to you that you start to speak Dutch and people answer in English? Do you always understand jokes and expressions?
+    Would you like to prevent to make mistakes, rather than have them corrected? Now is the time to improve your Dutch in a relaxed atmosphere.
+    You decide what you want to learn and the amount and frequency of the lessons. You get a free intake of 30 minutes! Start today!" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>-->
 </head>
 <body>
 
@@ -11,8 +18,18 @@
   <div id="left">
     <a class="logo" href="[%= homepage.url[currentlanguage] %]"></a>
     <ul id="languages">
-      <li class="[%= (currentlanguage == 'en' ? 'active' : '') %]"><a href="[%= currentpage.url.en %]"><span>E</span>nglish</a></li>
-      <li class="[%= (currentlanguage == 'nl' ? 'active' : '') %]"><a href="[%= currentpage.url.nl %]"><span>N</span>ederlands</a></li>
+      <li class="[%= (currentlanguage == 'en' ? 'active' : '') %]">
+        <a href="[%= currentpage.url.en %]" title="View this website in English">
+          <span class="text">View this website in</span><br />
+          <span class="first">E</span>nglish
+        </a>
+      </li>
+      <li class="[%= (currentlanguage == 'nl' ? 'active' : '') %]">
+        <a href="[%= currentpage.url.nl %]" title="Bekijk deze website in het Nederlands">
+          <span class="text">Bekijk deze website in het</span><br />
+          <span class="first">N</span>ederlands
+        </a>
+      </li>
     </ul>
   </div>
   <div id="menu">
@@ -20,14 +37,13 @@
       [% pages.map(function (page, i) { %]
       <li class="[%= (currentpage.id == page.id ? 'active' : '') %]">
         <span class="key">([%= i %])</span>
-        <a href="[%= page.url[currentlanguage] %]" rel="[%= page.id %]">[%= page.title[currentlanguage] %]</a>
+        <a href="[%= page.url[currentlanguage] %]" title="[%= page.title[currentlanguage] %]" rel="[%= page.id %]">[%= page.title[currentlanguage] %]</a>
       </li>
       [% if (i == 1) { %]
     </ul>
     <ul class="menu">
       [% } %]
       [% }) %]
-      <!-- TODO 2 columns -->
     </ul>
     <div style="clear:both;"></div>
   </div>

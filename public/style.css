@@ -1,106 +1,180 @@
 
 body {
-    margin:0;
-    padding:0;
-    background:#fff url("/logo-w250.png") no-repeat 15px 50px fixed;
-    
-    font-family:Georgia, "Times new Roman", serif;
-    font-size:16px;
-    color:#333;
-}
-h1 {
-    margin:20px 0 15px 0;
-    font-family:Helvetica, Arial, sans-serif;
-    letter-spacing:-1px;
-    font-size:35px;
-    line-height:45px;
-    color:#000;
-    border-bottom:2px solid #eee;
-}
-h2 {
-    margin:20px 0 10px 20px;
-    font-family:Helvetica, Arial, sans-serif;
-    font-size:20px;
-    color:#1C3A94;
-}
-p {
-    margin:10px 0;
-    line-height:22px;
-    font-size:16px;
-}
-.content ul {
-    margin:10px 0;
-    padding:0 0 0 20px;
-}
-.content ul li {
-    line-height:22px;
-}
-ul.menu {
-    position:fixed;
-    top:0;
-    left:0;
-    margin:0;
-    padding:10px 15px;
-    width:100%;
-    background:#fff;
-}
-ul.menu li {
-    float:left;
-    list-style:none;
-    margin:0 15px 0 0;
-}
-ul.menu li a {
-    font-size:16px;
-    color:#2A57DE;
-    font-family:Helvetica, Arial, sans-serif;
-}
-ul.menu li a.active {
-    color:#000;
-    font-weight:bold;
-    letter-spacing:-1px;
-    text-decoration:none;
-}
-ul.language-menu {
-    position:fixed;
-    top:350px;
-    left:85px;
-    margin:0;
-    padding:0;
-    width:150px;
-    background:#fff;
-}
-ul.language-menu li {
-    list-style:none;
-    margin:0 0 10px 0;
-    text-align:center;
-}
-ul.language-menu li a {
-    font-family:Helvetica, Arial, sans-serif;
-    font-size:18px;
-    text-decoration:underline;
-    color:#2A57DE;
-}
-ul.language-menu li a.active {
-    color:#000;
-    font-weight:bold;
-    letter-spacing:-1px;
-    text-decoration:none;
-}
-.content {
-    margin:50px 0 0 280px;
-    width:500px;
-}
-.footer {
-    margin:100px 20px 50px 20px;
-}
-.footer p {
-    margin:6px 0;
-    font-size:14px;
-    font-family:Helvetica, Arial, sans-serif;
-    color:#777;
-    text-align:center;
-}
-.footer a {
-    color:#555;
+  margin:0;
+  padding:0;
+  font-family:Arial, sans-serif;
+  font-size:16px;
 }
 
+#top {
+  padding:10px 15px;
+  position:relative;
+  background:#f5f5f5 url("top.png") top left repeat-x;
+  border-bottom:1px solid #ddd;
+}
+
+#menu {
+  margin:0 0 0 235px;
+  padding:0;
+}
+
+#menu ul {
+  margin:0 30px 0 0;
+  padding:0;
+  float:left;
+}
+
+#menu ul li {
+  margin:3px 0;
+  padding:0;
+  list-style:none;
+}
+
+#menu ul li .key {
+  font-family:"Times new Roman", serif;
+  font-size:17px;
+  font-style:italic;
+  color:#bbb;
+}
+
+#menu ul li a {
+  font-size:19px;
+  color:#888;
+  font-weight:bold;
+  text-decoration:none;
+  letter-spacing:-1px;
+}
+
+#menu ul li a:hover {
+  color:#555;
+  text-shadow:1px 1px 0 #f5f5f5;
+}
+
+#menu ul li.active a {
+  color:#000;
+  text-shadow:1px 1px 0 #f5f5f5;
+}
+
+#left {
+  position:absolute;
+}
+
+#left a.logo {
+  display:block;
+  width:217px;
+  height:240px;
+  background:transparent url("logo.png") no-repeat top left;
+}
+
+#left ul#languages {
+  margin:20px 0 0 20px;
+  padding:0;
+}
+
+#left ul#languages li {
+  margin:0 0 5px 0;
+  padding:0;
+  list-style:none;
+  text-align:center;
+}
+
+#left ul#languages li a {
+  font-family:Arial, sans-serif;
+  text-transform:uppercase;
+  font-size:18px;
+  letter-spacing:-2px;
+  font-weight:bold;
+  font-style:normal;
+  text-decoration:none;
+  color:#555;
+}
+
+#left ul#languages li a span.first {
+  font-size:21px;
+}
+
+#left ul#languages li.active a {
+  color:#124d9e;
+}
+
+#left ul#languages li a .text {
+  font-family:"Times new Roman", serif;
+  font-size:17px;
+  font-style:italic;
+  font-weight:normal;
+  text-transform:none;
+  letter-spacing:0;
+  color:#666;
+}
+
+#content {
+  margin-left:250px;
+  max-width:900px;
+}
+
+#content p,
+#content li,
+#content dd {
+  line-height:140%;
+  color:#333;
+}
+
+#content p {
+  margin:10px 0;
+}
+
+#content .col {
+  float:left;
+  width:50%;
+}
+
+h1,
+p.h1 {
+  margin:20px 0 10px 0;
+  padding:0;
+  font-size:40px;
+  letter-spacing:-1px;
+  text-shadow:2px 2px 0px #ddd;
+  font-weight:bold;
+}
+
+h2 {
+  margin:15px 0 15px 0;
+  color:#124d9e;
+  font-size:20px;
+}
+
+dt {
+  font-weight:bold;
+  margin:10px 0 5px 0;
+}
+
+.content a {
+  color:#124d9e;
+  text-decoration:underline;
+}
+
+.page {
+  display:none;
+}
+.page.active {
+  display:block;
+}
+
+#page-home {
+  display:block;
+}
+
+.content {
+  padding-right:15px;
+}
+
+p.meta {
+  font-style:italic;
+}
+
+p.footer {
+  margin:100px 0 50px 0;
+  text-align:center;
+  color:#888;
+}
