@@ -10,75 +10,30 @@
     You decide what you want to learn and the amount and frequency of the lessons. You get a free intake of 30 minutes! Start today!" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>-->
 </head>
 <body>
 
-<div id="top">
-  <div id="left">
-    <a class="logo" href="[%= homepage.url[currentlanguage] %]"></a>
-    <ul id="languages">
-      <li class="[%= (currentlanguage == 'en' ? 'active' : '') %]">
-        <a href="[%= currentpage.url.en %]" title="View this website in English">
-          <span class="text">View this website in</span><br />
-          <span class="first">E</span>nglish
-        </a>
-      </li>
-      <li class="[%= (currentlanguage == 'nl' ? 'active' : '') %]">
-        <a href="[%= currentpage.url.nl %]" title="Bekijk deze website in het Nederlands">
-          <span class="text">Bekijk deze website in het</span><br />
-          <span class="first">N</span>ederlands
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="menu">
-    <ul class="menu">
-      [% pages.map(function (page, i) { %]
-      <li class="[%= (currentpage.id == page.id ? 'active' : '') %]">
-        <span class="key">([%= i %])</span>
-        <a href="[%= page.url[currentlanguage] %]" title="[%= page.title[currentlanguage] %]" rel="[%= page.id %]">[%= page.title[currentlanguage] %]</a>
-      </li>
-      [% if (i == 1) { %]
-    </ul>
-    <ul class="menu">
-      [% } %]
-      [% }) %]
-    </ul>
-    <div style="clear:both;"></div>
-  </div>
-</div>
-
-<div id="content">
+<ul class="menu">
   [% pages.map(function (page, i) { %]
-  <div class="page [%= (page === currentpage && 'en' === currentlanguage ? 'active' : '') %]" id="page-en-[%= page.id %]">[%= page.content.en %]</div>
-  <div class="page [%= (page === currentpage && 'nl' === currentlanguage ? 'active' : '') %]" id="page-nl-[%= page.id %]">[%= page.content.nl %]</div>
+  <li>
+    <a href="[%= page.url[currentlanguage] %]" rel="[%= page.id %]" title="[%= page.title[currentlanguage] %]"
+      class="[%= (currentpage.id == page.id ? 'active' : '') %]">[%= page.title[currentlanguage] %]</a>
+  </li>
   [% }) %]
+</ul>
+
+<ul class="language-menu">
+  <li><a href="[%= currentpage.url.en %]" class="[%= (currentlanguage == 'en' ? 'active' : '') %]" title="In English">English</a></li>
+  <li><a href="[%= currentpage.url.nl %]" class="[%= (currentlanguage == 'nl' ? 'active' : '') %]" title="In the Nederlands">Nederlands</a></li>
+</ul>
+
+<div class="body">
+  [%= currentpage.content[currentlanguage] %]
 </div>
 
-<div style="clear:both;"></div>
-<p class="footer">
-  &copy; Rood Wit Blauw 2011
-</p>
+<div class="footer">
+  <p>&copy; Rood Wit Blauw 2011</p>
+</div>
 
-<!--
-<script type="text/javascript">
-
-  // Page transitions
-  $("#menu a").click(function () {
-    $("#menu li").removeClass("active");
-    $(this).parent().addClass("active");
-    $(".page").hide();
-    $("#page-" + $(this).attr("rel")).show();
-    return false;
-  });
-  $("#languages a").click(function () {
-    $("#languages li").removeClass("active");
-    $(this).parent().addClass("active");
-    return false;
-  });
-
-</script>
--->
 </body>
 </html>
