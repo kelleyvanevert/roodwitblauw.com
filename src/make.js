@@ -1,5 +1,5 @@
 
-var _ = require("./public/underscore"),
+var _ = require("../underscore"),
     fs = require("fs"),
     template = null,
     pages = [],
